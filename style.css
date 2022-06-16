@@ -1,0 +1,15 @@
+a:link {
+    color: rgb(51, 139, 197);
+  }
+  
+  a:visited {
+    color: rgb(216, 41, 94);
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  h1 {
+      color:red;
+  }
