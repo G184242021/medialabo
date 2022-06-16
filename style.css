@@ -3,7 +3,7 @@ a:link {
   }
   
   a:visited {
-    color: rgb(216, 41, 94);
+    color: rgb(207, 33, 85);
   }
   
   a:hover {
@@ -11,5 +11,12 @@ a:link {
   }
   
   h1 {
-      color:red;
+      color:rgb(201, 35, 35);
+  }
+
+  h2,h3{
+      color:rgb(18, 126, 177);
+  }
+  body{
+    background-color: rgb(212, 212, 212);
   }
