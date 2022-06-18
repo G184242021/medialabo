@@ -1,9 +1,9 @@
 a:link {
-    color: rgb(51, 139, 197);
+    color: rgb(112, 186, 236);  
   }
   
   a:visited {
-    color: rgb(207, 33, 85);
+    color: rgba(235, 104, 143, 0.506);
   }
   
   a:hover {
@@ -17,6 +17,27 @@ a:link {
   h2,h3{
       color:rgb(18, 126, 177);
   }
+
+/*
   body{
-    background-color: rgb(212, 212, 212);
+    background-color: rgb(74, 216, 238);
   }
+*/
+
+h4 {
+  color:rgb(126, 225, 96);
+}
+
+
+div.zentai {
+  display: grid;                      /* グリッドレイアウトにする*/
+  grid-template-columns: 1fr 1fr 1fr; /* 3列にする．幅は 1:2:2 の比率*/
+  grid-template-rows: 100px 100px;    /* 2行にする．高さはともに 100px */
+  grid-gap: 10px;                     /* 隣り合う行（列）の間隔を 10px に*/
+
+  width: 1500px;
+}
+
+div.box {
+  background: rgb(201, 245, 154);
+}
