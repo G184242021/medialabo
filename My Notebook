@@ -1,0 +1,16 @@
+第4回講義
+
+DOM API では次のことができる
+
+要素の検索
+  一つだけ検索         quetySelector(セレクタ)
+  全部検索             querySelectorAll(セレクタ)
+
+  要素を作る           createElement(タグ名)
+        削除           remove()
+
+  要素の追加           insertAdjacentElement(位置,要素)
+
+  要素中のテキストを見る、書き換える　　textContent
+
+  CSSを設定する
