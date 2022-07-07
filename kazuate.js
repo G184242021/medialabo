@@ -4,27 +4,22 @@ console.log('答え: ' + kotae);      // デバッグ用
 
 
 let c1 = document.querySelector('#print');
-c1.addEventListener('click', hantei);
+c1.addEventListener('click',hantei);
 
 let kaisu = 1;
 
 // hantei() の定義
 function hantei() {
-
     let k = document.querySelector('input[yoso="kaito"]');
     let yoso = Math.floor(k.value);
-
-
     let pr = document.querySelector('span#result');
     let py = document.querySelector('span#yoso');
-
     py.textContent = kaisu + "回目の予想:" + yoso;
-
-    if(kaisu >= 4) {
+    if(kaisu >= 4) {  //4回目以降の処理
         pr.textContent="答えは"+kotae+"でした。すでにゲームは終わっています。";
         kaisu = kaisu + 1;
     }
-    if(kaisu === 3) {
+    if(kaisu === 3) {   //3回目の処理
         if(yoso === kotae) {
             pr.textContent="正解です！おめでとう！";
         }else {
@@ -32,7 +27,7 @@ function hantei() {
         }
         kaisu = kaisu + 1;
     }
-    if(kaisu < 3 && kotae===yoso) {
+    if(kaisu < 3 && kotae===yoso) {  //1,2回目の処理
         pr.textContent="正解です！おめでとう！";
         end();
     }else if(kaisu < 3 && kotae < yoso) {
@@ -42,14 +37,7 @@ function hantei() {
         pr.textContent="まちがい！答えはもっと大きいですよ。";
         kaisu = kaisu + 1;
     }
-
-    function end() {
+    function end() {  //1,2回目に正解した場合に呼び出されるメソッド
         kaisu = kaisu + 3;
     }
-
 }
-
-
-
-    //        ページに表示する方法はまだ習っていないので
-    //        判定結果はコンソールに出力すること

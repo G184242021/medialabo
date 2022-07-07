@@ -1,39 +1,32 @@
-a:link {
+a:link {  /*未訪問のリンクの色彩*/
     color: rgb(112, 186, 236);  
   }
   
-  a:visited {
+  a:visited {  /*訪問済みのリンクの色彩*/
     color: rgba(235, 104, 143, 0.506);
   }
   
-  a:hover {
+  a:hover {  /*リンクにカーソルを合わせると下線が消える(通常は下線あり)*/
     text-decoration: none;
   }
   
-  h1 {
+  h1 {  /*h1の色彩*/
       color:rgb(201, 35, 35);
   }
 
-  h2 {
+  h2 {  /*h2の色彩*/  
     color:rgb(177, 124, 238);
   }
 
-  h3{
+  h3{  /*h3の色彩*/
       color:rgb(18, 126, 177);
   }
 
-/*
-  body{
-    background-color: rgb(74, 216, 238);
+  h4{  /*h4の色彩*/
+      color:rgb(112, 244, 68);
   }
-*/
 
-h4 {
-  color:rgb(112, 244, 68);
-}
-
-
-div.zentai {
+.zentai {  /*zentaiというdiv要素について*/
   display: grid;                      /* グリッドレイアウトにする*/
   grid-template-columns: 1fr 1fr 1fr; /* 3列にする．幅は 1:2:2 の比率*/
   grid-template-rows: 100px 100px;    /* 2行にする．高さはともに 100px */
@@ -42,8 +35,35 @@ div.zentai {
   width: 1500px;
 }
 
+body {  /*body要素の背景の色彩*/
+  background-color: rgba(182, 247, 247, 0.173);
+}
 
+h4 {  /*h4要素のフォントスタイル*/
+  font-style:italic;
+}
 
-div.box {
-  background: rgb(201, 245, 154);
+body {  /*body要素の文字の間隔*/
+  letter-spacing:0.04em;
+}
+
+/*
+html {  index.html全体の外枠について
+  border-style:solid ;  solid:個体
+  border-color:red ;
+  border-width: 0.75em;
+}
+*/
+
+.first-lesson,.third-lesson,.fifth-lesson{
+  border:solid;
+  border-color: blue;
+  position: relative;
+}
+
+.second-lesson,.fourth-lesson,.sixth-lesson{
+  border:solid;
+  border-color: red;
+  position: relative;
+  left: 150px;
 }
