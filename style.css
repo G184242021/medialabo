@@ -14,7 +14,11 @@ a:link {
       color:rgb(201, 35, 35);
   }
 
-  h2,h3{
+  h2 {
+    color:rgb(177, 124, 238);
+  }
+
+  h3{
       color:rgb(18, 126, 177);
   }
 
@@ -37,6 +41,8 @@ div.zentai {
 
   width: 1500px;
 }
+
+
 
 div.box {
   background: rgb(201, 245, 154);
