@@ -11,19 +11,22 @@ a:link {  /*未訪問のリンクの色彩*/
   }
   
   h1 {  /*h1の色彩*/
-      color:rgb(201, 35, 35);
+      color:rgb(239, 122, 122);
   }
 
   h2 {  /*h2の色彩*/  
-    color:rgb(177, 124, 238);
+    color:rgb(74, 152, 221);
+    font-size: 40px;
   }
 
   h3{  /*h3の色彩*/
-      color:rgb(18, 126, 177);
+      color:rgb(235, 85, 40);
+      font-size:25px;
+      text-align: center;
   }
 
   h4{  /*h4の色彩*/
-      color:rgb(112, 244, 68);
+      color:rgb(18, 238, 26);
   }
 
 .zentai {  /*zentaiというdiv要素について*/
@@ -35,16 +38,13 @@ a:link {  /*未訪問のリンクの色彩*/
   width: 1500px;
 }
 
-body {  /*body要素の背景の色彩*/
-  background-color: rgba(182, 247, 247, 0.173);
-}
 
 h4 {  /*h4要素のフォントスタイル*/
   font-style:italic;
 }
 
 body {  /*body要素の文字の間隔*/
-  letter-spacing:0.04em;
+  letter-spacing:0.03em;
 }
 
 /*
@@ -55,15 +55,75 @@ html {  index.html全体の外枠について
 }
 */
 
-.first-lesson,.third-lesson,.fifth-lesson{
-  border:solid;
-  border-color: blue;
-  position: relative;
+
+h3 {
+  color: #364e96;
+  border: solid 3px #a6d3c8;
+  border-radius: 0.5em;
+  padding: 0.5em;
 }
 
-.second-lesson,.fourth-lesson,.sixth-lesson{
-  border:solid;
-  border-color: red;
+body {  /*body要素の背景の色彩*/
+  background-color: rgba(182, 247, 247, 0.173);
+}
+
+/*
+body {
+  background: repeating-linear-gradient( 45deg, #b6d2e8, #2196F3 10px, #d0ecff 10px, #d0ecff 50px );
+}*/
+
+h1 {
   position: relative;
-  left: 150px;
+  display: inline-block;
+  padding: 1rem 2rem 1rem 4rem;
+  color: #fff;
+  border-radius: 100vh 0 0 100vh;
+  background: #3c98ea;
+}
+
+h1:before {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 10px;
+  width: 14px;
+  height: 14px;
+  content: '';
+  border-radius: 50%;
+  background: #fff;
+}
+
+h2 {
+  position: relative;
+  overflow: hidden;
+  padding: 1.5rem 2rem 1.5rem 130px;
+  border-top: 3px solid rgb(54, 218, 103);
+}
+
+h2:before {
+  position: absolute;
+  top: -150%;
+  left: -100px;
+  width: 200px;
+  height: 300%;
+  content: '';
+  -webkit-transform: rotate(25deg);
+  transform: rotate(25deg);
+  background: rgb(76, 236, 193);
+}
+
+h2 span {
+  font-size: 40px;
+  font-size: 4rem;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: block;
+  padding-top: 3px;
+  padding-left: 16px;
+  color: rgb(74, 152, 221);
+}
+
+.box {
+  font-size: 25px;
 }

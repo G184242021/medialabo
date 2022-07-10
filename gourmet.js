@@ -202,3 +202,4 @@ let data = {
   /////////// 課題3-2 ここからプログラムを書こう
 
   console.log(data.results.shop.sub_genre.name);
+
