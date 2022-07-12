@@ -6,12 +6,12 @@ a:link {  /*未訪問のリンクの色彩*/
     color: rgba(235, 104, 143, 0.506);
   }
   
-  a:hover {  /*リンクにカーソルを合わせると下線が消える(通常は下線あり)*/
-    text-decoration: none;
+  a:hover{  /*リンクにカーソルを合わせると色が変わる*/
+    color : #33f319;
   }
   
   h1 {  /*h1の色彩*/
-      color:rgb(239, 122, 122);
+      color:rgb(234, 45, 222);
   }
 
   h2 {  /*h2の色彩*/  
@@ -127,3 +127,10 @@ h2 span {
 .box {
   font-size: 25px;
 }
+
+.content a{
+  font-weight:bold;
+  display: inline-block;
+  transition:.3s;
+  transform: scale(1);
+  }

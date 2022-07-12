@@ -201,5 +201,59 @@ let data = {
   
   /////////// 課題3-2 ここからプログラムを書こう
 
-  console.log(data.results.shop.sub_genre.name);
+  //console.log(data.results.shop.sub_genre.name);
 
+  let search = document.querySelector(`input[name='search']`);
+let submit = document.querySelector(`input[name='submit']`);
+
+
+let c1 = document.querySelector('#print');
+c1.addEventListener('click',genre);
+
+
+// genre() の定義
+function genre() {
+    let k = document.querySelector('input[word="kaito"]');
+    //let yoso = Math.floor(k.value);
+    let pr = document.querySelector('span#result');
+    let py = document.querySelector('span#word');
+    //py.textContent = kaisu + "回目の予想:" + yoso;
+
+    if(word === '居酒屋' || word === 'G001') {
+      pr.textContent="居酒屋を検索しました。";
+    }else if(word === 'ダイニングバー・バル || word === G002') {
+      pr.textContent="ダイニングバー・バルを検索しました。";
+    }else if(word ==='創作料理' || word === 'G003') {
+      pr.textContent="創作料理を検索しました。";
+    }else if(word === '和食' || word === 'G004') {
+      pr.textContent="和食を検索しました。";
+    }else if(word === '洋食' || word === 'G005') {
+      pr.textContent="洋食を検索しました。";
+    }else if(word === 'イタリアン・フレンチ' || word === 'G006') {
+      pr.textContent="イタリアン・フレンチを検索しました。";
+    }else if(word === '中華' || word === 'G007') {
+      pr.textContent="中華を検索しました。";
+    }else if(word === '焼き肉・ホルモン' || word === 'G008') {
+      pr.textContent="焼き肉・ホルモンを検索しました。";
+    }else if(word === 'アジア・エスニック料理' || word === 'G009') {
+      pr.textContent="アジア・エスニック料理を検索しました。";
+    }else if(word === '各国料理' || word === 'G010') {
+      pr.textContent="各国料理を検索しました。";
+    }else if(word === 'カラオケ・パーティ' || word === 'G011') {
+      pr.textContent="カラオケ・パーティを検索しました。";
+    }else if(word === 'バー・カクテル' || word === 'G012') {
+      pr.textContent="バー・カクテルを検索しました。";
+    }else if(word === 'ラーメン' || word === 'G013') {
+      pr.textContent="ラーメンを検索しました。";
+    }else if(word === 'カフェ・スイーツ' || word === 'G014') {
+      pr.textContent="カフェ・スイーツを検索しました。";
+    }else if(word === 'その他グルメ' || word === 'G015') {
+      pr.textContent="その他グルメを検索しました。";
+    }else if(word === 'お好み焼き・もんじゃ' || word === 'G016') {
+      pr.textContent="お好み焼き・もんじゃを検索しました。";
+    }else if(word === '韓国料理' || word === 'G017') {
+      pr.textContent="韓国料理を検索しました。";
+    }else {
+      pr.textContent="もう一度入力し直してください";
+    }
+}
