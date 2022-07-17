@@ -134,3 +134,7 @@ h2 span {
   transition:.3s;
   transform: scale(1);
   }
+
+  .sub-title{
+    color:rgb(42, 81, 235);
+  }
