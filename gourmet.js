@@ -204,6 +204,8 @@ let data = {
 console.log(data.results.shop);
 
 
+//課題4-2
+//コンソールではなく、ページ上にデータを表示
 
 
 
@@ -216,22 +218,28 @@ console.log(data.results.shop);
 
 
 
-  let search = document.querySelector(`input[name='search']`);
-let submit = document.querySelector(`input[name='submit']`);
 
 
-let c1 = document.querySelector('#print');
-c1.addEventListener('click',genre);
+
+
+  //let search = document.querySelector(`input[name='search']`);
+//let submit = document.querySelector(`input[name='submit']`);
+
+
+/*let c1 = document.querySelector('#print');
+c1.addEventListener('click',genre);*/
 
 
 // genre() の定義
-function genre() {
+/*function genre() {
   let k = document.querySelector('input[word="kaito"]');
   let word = Math.floor(k.value);
   let pr = document.querySelector('span#result');
   let py = document.querySelector('span#word');
-    //py.textContent = kaisu + "回目の予想:" + yoso;
+    py.textContent = kaisu + "回目の予想:" + yoso;*/
 
+
+/*
     if(word === '居酒屋' || word === 'G001') {
       pr.textContent="居酒屋を検索しました。";
     }else if(word === 'ダイニングバー・バル || word === G002') {
@@ -268,5 +276,15 @@ function genre() {
       pr.textContent="韓国料理を検索しました。";
     }else {
       pr.textContent="もう一度入力し直してください";
-    }
-}
+      */
+    
+  window.addEventListener('DOMContentLoaded', function() {
+    //select要素を取得
+    var selected_genre = document.querySelector("select[name=genre]");
+    selected_genre.addEventListener('change',function(){
+      console.log(selected_genre.value+":");
+    });
+  });
+
+
+

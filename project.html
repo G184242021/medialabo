@@ -11,13 +11,39 @@
 <h1>グルメ情報</h1>
 
 
-<label for="answer">検索したいグルメ情報を選択: </label>
-	<input type="text" word="kaito" placeholder="ジャンルまたは番号" size="30">
-	<button id="print">検索</button>
+	<!--   <input type="text" word="kaito" placeholder="ジャンルまたは番号" size="30">  -->
+    <!--   <p><span id ="word"></span></p>
+    <span id="result"></span>     -->
 
-    <p><span id ="word"></span></p>
-    <span id="result"></span>
 
+    <form>
+      <label for="answer">検索したいグルメ情報を選択してください: </label>
+
+      <select name="genre">
+        <option value="">ジャンルを選択</option>
+        <option value="genre1">居酒屋</option>
+        <option value="genre2">ダイニングバー・バル</option>
+        <option value="genre3">創作料理</option>
+        <option value="genre4">和食</option>
+        <option value="genre5">洋食</option>
+        <option value="genre6">イタリアン・フレンチ</option>
+        <option value="genre7">中華</option>
+        <option value="genre8">焼き肉・ホルモン</option>
+        <option value="genre9">アジア・エスニック料理</option>
+        <option value="genre10">各国料理</option>
+        <option value="genre11">カラオケ・パーティ</option>
+        <option value="genre12">バー・カクテル</option>
+        <option value="genre13">ラーメン</option>
+        <option value="genre14">カフェ・スイーツ</option>
+        <option value="genre15">その他グルメ</option>
+        <option value="genre16">お好み焼き・もんじゃ</option>
+        <option value="genre17">韓国料理</option>
+      </select>
+    </form>
+    <input type="button" value="検索" onclick="clickBtn1()"/>
+
+
+<!--
 <style>
   table {
     border-collapse: collapse;
@@ -98,6 +124,7 @@
     <td>韓国料理</td>
   </tr>
 </table>
+-->
 
 </body>
 </html>
