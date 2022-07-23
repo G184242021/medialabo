@@ -44,17 +44,8 @@ h4 {  /*h4要素のフォントスタイル*/
 }
 
 body {  /*body要素の文字の間隔*/
-  letter-spacing:0.03em;
+  letter-spacing:0.02em;
 }
-
-/*
-html {  index.html全体の外枠について
-  border-style:solid ;  solid:個体
-  border-color:red ;
-  border-width: 0.75em;
-}
-*/
-
 
 h3 {
   color: #364e96;
