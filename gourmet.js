@@ -25,8 +25,8 @@ function showResult(resp) {
 		data = JSON.parse(data);
 	}
 
-  let sakujo = document.querySelector('sn');
-  sakujo.remove();
+  //let sakujo = document.querySelector('sn');
+  //sakujo.remove();
 
   for (n of data.results.shop) {
 
@@ -47,7 +47,7 @@ function showResult(resp) {
     e.textContent = '【営業日・時間・ラストオーダー等】 : ' + n.open;
     f.textContent = '【予算】 : ' + n.budget.average;
     g.textContent = '【キャッチ】 : ' + n.genre.catch;
-    
+
     sn.insertAdjacentElement('beforeend',a);//要素snの子要素の最後にaを追加
     sn.insertAdjacentElement('beforeend',g);
     sn.insertAdjacentElement('beforeend',c);
