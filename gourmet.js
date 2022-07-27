@@ -28,8 +28,9 @@ function showResult(resp) {
   //let sakujo = document.querySelector('sn');
   //sakujo.remove();
 
+  n.remove(sn.childNodes);//?
+  
   for (n of data.results.shop) {
-
     let a = document.createElement('h2');//h2要素を作成(店舗名を代入するため)
     let c = document.createElement('p');//p要素を作成(店の詳細を代入するため)
     let d = document.createElement('p');
