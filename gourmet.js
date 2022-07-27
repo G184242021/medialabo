@@ -21,8 +21,8 @@ b.addEventListener('click', sendRequest);
 
 
 let sn = document.querySelector('span#name');
-let tn = sn;
-let kensakukaisu = 0;
+//let tn = sn;
+//let kensakukaisu = 0;
 
   // 通信を開始する処理
 function sendRequest() {
@@ -45,8 +45,11 @@ function showResult(resp) {
   if (typeof data === 'string') {
 		data = JSON.parse(data);
 	}
-  if(kensakukaisu%2 === 0) {
+  //if(kensakukaisu%2 === 0) {
   for (n of data.results.shop) {
+    while( sn.childNodes ){
+      sn.removeChild(sn.childNodes);
+    }
     let a = document.createElement('h2');//h2要素を作成
     let c = document.createElement('p');//p要素を作成
     let d = document.createElement('p');
@@ -66,12 +69,15 @@ function showResult(resp) {
     sn.insertAdjacentElement('beforeend',e);
     sn.insertAdjacentElement('beforeend',f);
   }
-  while( tn.Child ){
-    tn.removeChild(tn.Child);
-  }
-  kensakukaisu = kensakukaisu + 1;
+  /*while( tn.childNodes ){
+    tn.removeChild(tn.childNodes);
+  }*/
+  //kensakukaisu = kensakukaisu + 1;
   
-}else {
+//}else {
+  /*while( sn.childNodes ){
+    sn.removeChild(sn.childNodes);
+  }
   for (n of data.results.shop) {
     let a = document.createElement('h2');//h2要素を作成
     let c = document.createElement('p');//p要素を作成
@@ -92,11 +98,11 @@ function showResult(resp) {
     tn.insertAdjacentElement('beforeend',e);
     tn.insertAdjacentElement('beforeend',f);
   }
-  while( sn.Child ){
-    sn.removeChild(sn.Child);
+  while( sn.childNodes ){
+    sn.removeChild(sn.childNodes);
   }
   kensakukaisu = kensakukaisu + 1;
-}
+}*/
 
 	
 
