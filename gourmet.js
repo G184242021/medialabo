@@ -21,6 +21,9 @@ b.addEventListener('click', sendRequest);
 
 
 let sn = document.querySelector('span#name');
+let tn = sn;
+let kensakukaisu = 0;
+
   // 通信を開始する処理
 function sendRequest() {
   let id = document.getElementById("genre").value;
@@ -36,14 +39,13 @@ function sendRequest() {
 
 // 通信が成功した時の処理
 function showResult(resp) {
-
 	// サーバから送られてきたデータを出力
 	let data = resp.data;
-
-  	// data が文字列型なら，オブジェクトに変換する
+  // data が文字列型なら，オブジェクトに変換する
   if (typeof data === 'string') {
 		data = JSON.parse(data);
 	}
+  if(kensakukaisu%2 === 0) {
   for (n of data.results.shop) {
     let a = document.createElement('h2');//h2要素を作成
     let c = document.createElement('p');//p要素を作成
@@ -51,14 +53,12 @@ function showResult(resp) {
     let e = document.createElement('p');
     let f = document.createElement('p');
     let g = document.createElement('p');
-
     a.textContent = n.name;//a要素のテキストを設定
     c.textContent = '【アクセス】 : ' + n.access;
     d.textContent = '【住所】 : ' + n.address;
     e.textContent = '【営業日・時間・ラストオーダー等】 : ' + n.open;
     f.textContent = '【予算】 : ' + n.budget.average;
     g.textContent = '【キャッチ】 : ' + n.genre.catch;
-
     sn.insertAdjacentElement('beforeend',a);//要素snの子要素の最後にaを追加
     sn.insertAdjacentElement('beforeend',g);
     sn.insertAdjacentElement('beforeend',c);
@@ -66,6 +66,37 @@ function showResult(resp) {
     sn.insertAdjacentElement('beforeend',e);
     sn.insertAdjacentElement('beforeend',f);
   }
+  while( tn.Child ){
+    tn.removeChild(tn.Child);
+  }
+  kensakukaisu = kensakukaisu + 1;
+  
+}else {
+  for (n of data.results.shop) {
+    let a = document.createElement('h2');//h2要素を作成
+    let c = document.createElement('p');//p要素を作成
+    let d = document.createElement('p');
+    let e = document.createElement('p');
+    let f = document.createElement('p');
+    let g = document.createElement('p');
+    a.textContent = n.name;//a要素のテキストを設定
+    c.textContent = '【アクセス】 : ' + n.access;
+    d.textContent = '【住所】 : ' + n.address;
+    e.textContent = '【営業日・時間・ラストオーダー等】 : ' + n.open;
+    f.textContent = '【予算】 : ' + n.budget.average;
+    g.textContent = '【キャッチ】 : ' + n.genre.catch;
+    tn.insertAdjacentElement('beforeend',a);//要素tnの子要素の最後にaを追加
+    tn.insertAdjacentElement('beforeend',g);
+    tn.insertAdjacentElement('beforeend',c);
+    tn.insertAdjacentElement('beforeend',d);
+    tn.insertAdjacentElement('beforeend',e);
+    tn.insertAdjacentElement('beforeend',f);
+  }
+  while( sn.Child ){
+    sn.removeChild(sn.Child);
+  }
+  kensakukaisu = kensakukaisu + 1;
+}
 
 	
 
