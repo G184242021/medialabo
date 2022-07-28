@@ -1,7 +1,7 @@
 let b = document.querySelector('#sendRequest');
 b.addEventListener('click', sendRequest);
 
-let sn = document.querySelector('span#name');
+let sn = document.querySelector('div#name');
 
 // 通信を開始する処理
 function sendRequest() {
@@ -25,10 +25,12 @@ function showResult(resp) {
 		data = JSON.parse(data);
 	}
 
-  //let sakujo = document.querySelector('sn');
-  //sakujo.remove();
+  let sakujo = sn.querySelectorAll('*');
+  for(n of sakujo) {
+    n.remove();
+  }
 
-  //n.remove(sn.childNodes);//?
+  //n.remove(sn.childNodes);
 
   for (n of data.results.shop) {
     let a = document.createElement('h2');//h2要素を作成(店舗名を代入するため)
@@ -49,12 +51,12 @@ function showResult(resp) {
     f.textContent = '【予算】 : ' + n.budget.average;
     g.textContent = '【キャッチ】 : ' + n.genre.catch;
 
-    sn.insertAdjacentElement('beforeend',a);//要素snの子要素の最後にaを追加
-    sn.insertAdjacentElement('beforeend',g);
-    sn.insertAdjacentElement('beforeend',c);
-    sn.insertAdjacentElement('beforeend',d);
-    sn.insertAdjacentElement('beforeend',e);
-    sn.insertAdjacentElement('beforeend',f);
+      sn.insertAdjacentElement('beforeend',a);//要素snの子要素の最後にaを追加
+      sn.insertAdjacentElement('beforeend',g);
+      sn.insertAdjacentElement('beforeend',c);
+      sn.insertAdjacentElement('beforeend',d);
+      sn.insertAdjacentElement('beforeend',e);
+      sn.insertAdjacentElement('beforeend',f);
   }
 
 	// data をコンソールに出力
