@@ -1,5 +1,6 @@
 p{
-  color:rgb(233, 61, 61);
+  color:rgb(193, 131, 8);
+  margin-left: 20px;
 }
 
 h1 {
@@ -19,20 +20,32 @@ h1::before {
   border-right: solid 20px rgb(149, 158, 155);
 }
 
-h2 {
-  padding: 0.5em 1em;
-  margin: 2em 0;
-  color: #FFF;
-  background: #87f45f;
-  border-bottom: solid 6px #27cf54;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
-  border-radius: 9px;
-}
-h2 {
-  margin: 0; 
-  padding: 0;
-}
-
 body {
   background-color: #e4f6f5;
+}
+
+h2 {
+  display: flex;          /* フレックスボックスにする */
+  flex-direction: row;    /* 横向きに表示（column に変更すると縦向きに表示） */
+
+  width: 750px;
+  border: 1px solid gray;
+  padding: 5px 5px 5px 0;
+}
+
+/*h2 {
+  flex: 2;                 横幅2で表示 
+
+  background-color: cyan;
+  margin-left: 5px;
+}*/
+
+h2 {
+  flex: 1;                /* 横幅1で表示 */
+  background-color: #a6d3c8;
+  margin-left: 5px;
+}
+
+h2 {
+  color:rgb(243, 65, 65);
 }

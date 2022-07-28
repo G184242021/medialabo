@@ -44,7 +44,7 @@ function showResult(resp) {
     //このメンバーに文字列を代入することで,p要素のテキストを設定できます
     //新しい要素は作ったあとに，その要素を DOM の木構造のどこかに追加しなくてはいけません
 
-    a.textContent = n.name;//a要素のテキストを設定
+    a.textContent = '〜'+n.name+'〜';//a要素のテキストを設定
     c.textContent = '【アクセス】 : ' + n.access;
     d.textContent = '【住所】 : ' + n.address;
     e.textContent = '【営業日・時間・ラストオーダー等】 : ' + n.open;
