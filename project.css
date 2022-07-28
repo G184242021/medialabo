@@ -49,3 +49,9 @@ h2 {
 h2 {
   color:rgb(243, 65, 65);
 }
+
+body {
+  background-image: url(https://3.bp.blogspot.com/-ZJsl7Md-0o8/WboZW5Nd_mI/AAAAAAABGm0/PqR5guTxT-Y20AyWV3IRFMV2IBGDA6PlwCLcBGAs/s400/gourmet_man.png);
+  background-repeat: no-repeat;
+  margin-left: 300px;
+}
